@@ -8,8 +8,8 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "Produk", href: "/produk" },
   { name: "Tentang", href: "/tentang" },
+  { name: "Produk", href: "/produk" },
   { name: "Kontak", href: "/kontak" },
 ];
 
@@ -17,14 +17,14 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full bg-white shadow-md z-50">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         <Link href="/" className="flex items-center space-x-2">
             <Image
-                src="/logo.png"
+                src="/images/logo.png"
                 alt="Logo lek"
-                width={32}
-                height={32}
+                width={70}
+                height={70}
                 priority
             />
             <span className="text-xl font-bold text-orange-600">Bara Sakti</span>
