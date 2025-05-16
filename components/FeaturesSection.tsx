@@ -20,7 +20,7 @@ export default function FeaturesSection() {
   return (
     <section className="bg-white py-16 px-6 max-w-7xl mx-auto rounded-lg shadow-md">
       <h2 className="text-3xl font-semibold mb-10 text-center text-stone-800">
-        Keunggulan Bara Sakti
+        Keunggulan Arang Briket
       </h2>
       <div className="grid md:grid-cols-3 gap-10">
         {features.map(({ title, description }) => (

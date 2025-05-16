@@ -5,29 +5,30 @@ import { useState } from "react";
 import Link from "next/link";
 import { HiMenu, HiX } from "react-icons/hi";
 import { cn } from "@/lib/utils";
+import { DarkMode } from "./DarkMode";
 
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "Tentang", href: "/tentang" },
-  { name: "Produk", href: "/produk" },
-  { name: "Kontak", href: "/kontak" },
+  { name: "Home", href: "#home" },
+  { name: "Tentang", href: "#tentang" },
+  { name: "Keunggulan", href: "#keunggulan" },
+  { name: "Kontak", href: "#kontak" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-md">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-md shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        <Link href="/" className="flex items-center space-x-2">
-            <Image
-                src="/images/logo.png"
-                alt="Logo lek"
-                width={70}
-                height={70}
-                priority
-            />
-            <span className="text-xl font-bold text-orange-600">Bara Sakti</span>
+        <Link href="#home" className="flex items-center">
+          <Image
+            src="/images/logo.png"
+            alt="Logo lek"
+            width={70}
+            height={70}
+            priority
+          />
+        <span className="text-xl font-bold text-orange-600">Bara Sakti</span>
         </Link>
 
         {/* Desktop menu */}
@@ -37,7 +38,7 @@ export default function Navbar() {
               key={item.href}
               href={item.href}
               className={cn(
-                "text-gray-700 hover:text-orange-600 transition-colors duration-300",
+                "text-white hover:text-orange-600 transition-colors duration-300",
                 "relative px-3 py-2 font-medium",
                 "after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-orange-600 after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left"
               )}
@@ -46,11 +47,12 @@ export default function Navbar() {
               {item.name}
             </Link>
           ))}
+          <DarkMode/>
         </div>
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden p-2 rounded-md text-gray-700 hover:text-orange-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-600"
+          className="md:hidden p-2 rounded-md text-gray-700 "
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
