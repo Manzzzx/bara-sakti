@@ -34,18 +34,17 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="bg-white/20 dark:bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-lg"
         >
-          <span className="inline-block text-sm text-green-500 font-semibold mb-2">Ramah Lingkungan</span>
           <h1 className="text-4xl md:text-5xl font-bold leading-tight text-black dark:text-white">
             Solusi Briket <span className="text-green-500">Bara Sakti</span>
             <br />
             untuk Energi Berkelanjutan
           </h1>
           <p className="mt-4 text-white dark:text-white">
-            Arang briket ber bahan dasar batok kelapa dengan proses ramah lingkungan, efisiensi tinggi, dan kualitas unggulan.
+            Arang briket berbahan dasar batok kelapa dengan proses ramah lingkungan, efisiensi tinggi, dan kualitas unggulan.
           </p>
-          <Link href="#keunggulan">
+          <Link href="#kontak">
             <Button className="mt-6 bg-green-600 hover:bg-green-700 text-white shadow-md">
-              Pelajari Lebih Lanjut
+              Pesan Sekarang
             </Button>
           </Link>
         </motion.div>
