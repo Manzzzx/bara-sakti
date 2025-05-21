@@ -5,7 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { HiMenu, HiX } from "react-icons/hi";
 import { cn } from "@/lib/utils";
-import { DarkMode } from "./DarkMode";
+// import { DarkMode } from "./DarkMode";
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -47,7 +47,7 @@ export default function Navbar() {
               {item.name}
             </Link>
           ))}
-          <DarkMode/>
+          {/* <DarkMode/> */}
         </div>
 
         {/* Mobile menu button */}

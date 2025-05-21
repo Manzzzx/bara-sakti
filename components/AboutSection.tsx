@@ -5,45 +5,46 @@ import Image from "next/image"
 
 export default function AboutSection() {
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
-      <div className="container mx-auto px-6 flex flex-col-reverse lg:flex-row items-center gap-12">
-        
-        {/* Teks */}
-        <motion.div
-          className="lg:w-1/2"
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Tentang <span className="text-green-600">Bara Sakti</span>
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
-            Bara Sakti hadir sebagai solusi energi alternatif berbasis arang briket batok kelapa yang ramah lingkungan, efisien, dan berkualitas tinggi. Kami ber-komitmen untuk menyediakan produk yang tidak hanya unggul secara fungsi, tetapi juga mendukung keberlanjutan lingkungan.
-          </p>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
-            Dengan mengedepankan inovasi dan proses produksi bersih, Bara Sakti menjadi pilihan tepat untuk kebutuhan rumah tangga, usaha kuliner, hingga industri.
-          </p>
-        </motion.div>
+    <section className="py-20 bg-gradient-to-br from-green-950 via-black to-orange-900 text-white shadow-2xl ring-1 ring-white/10">
+  <div className="container mx-auto px-6 flex flex-col-reverse lg:flex-row items-center gap-12">
+    
+    {/* Teks */}
+    <motion.div
+      className="lg:w-1/2"
+      initial={{ opacity: 0, x: -40 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        Tentang <span className="text-green-500">Bara Sakti</span>
+      </h2>
+      <p className="text-lg text-gray-300 mb-4">
+        Bara Sakti hadir sebagai solusi energi alternatif berbasis arang briket batok kelapa yang ramah lingkungan, efisien, dan berkualitas tinggi. Kami berkomitmen untuk menyediakan produk yang tidak hanya unggul secara fungsi, tetapi juga mendukung keberlanjutan lingkungan.
+      </p>
+      <p className="text-lg text-gray-400">
+        Dengan mengedepankan inovasi dan proses produksi bersih, Bara Sakti menjadi pilihan tepat untuk kebutuhan rumah tangga, usaha kuliner, hingga industri.
+      </p>
+    </motion.div>
 
-        {/* Gambar */}
-        <motion.div
-          className="lg:w-1/2 w-full"
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <div className="w-full h-auto rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/images/aboutbriket.jpg"
-              alt="Tentang Bara Sakti"
-              width={600}
-              height={400}
-              className="object-cover w-full h-full"
-            />
-          </div>
-        </motion.div>
+    {/* Gambar */}
+    <motion.div
+      className="lg:w-1/2 w-full"
+      initial={{ opacity: 0, x: 40 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+    >
+      <div className="w-full h-auto rounded-xl overflow-hidden shadow-xl ring-1 ring-white/10">
+        <Image
+          src="/images/aboutbriket.jpg"
+          alt="Tentang Bara Sakti"
+          width={600}
+          height={400}
+          className="object-cover w-full h-full"
+        />
       </div>
-    </section>
+    </motion.div>
+  </div>
+</section>
+
   )
 }

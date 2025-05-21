@@ -40,7 +40,7 @@ export default function Hero() {
             <br />
             untuk Energi Berkelanjutan
           </h1>
-          <p className="mt-4 text-gray-700 dark:text-white">
+          <p className="mt-4 text-white dark:text-white">
             Arang briket ber bahan dasar batok kelapa dengan proses ramah lingkungan, efisiensi tinggi, dan kualitas unggulan.
           </p>
           <Link href="#keunggulan">
