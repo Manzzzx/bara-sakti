@@ -47,13 +47,13 @@ export default function Keunggulan() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: idx * 0.2 }}
         >
-          {/* Icon Bulat di Atas */}
+          {/* Icon */}
           <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-orange-500 text-black rounded-full p-3 shadow-lg ring-4 ring-black">
             <span className="text-xl">
               {idx === 0 ? "🌱" : idx === 1 ? "🔥" : "⚡"}
             </span>
           </div>
-
+          
           {/* Gambar */}
           <div className="w-full h-48 relative mb-4 mt-6 rounded-md overflow-hidden group-hover:shadow-xl">
             <Image
