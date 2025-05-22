@@ -7,6 +7,7 @@ import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
   const router = useRouter();
@@ -36,6 +37,9 @@ export default function Home() {
       </section>
       <section id="keunggulan">
         <FeaturesSection />
+      </section>
+      <section id ="kontak">
+        <ContactSection/>
       </section>
       <Footer />
     </>
