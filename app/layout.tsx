@@ -16,6 +16,25 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Bara Sakti - Arang Briket batok kelapa",
   description: "Produk arang briket ramah lingkungan dari batok kelapa",
+  icons: {
+    icon: [
+      { rel: 'icon', url: '/images/logo.png' },
+      { rel: 'apple-touch-icon', url: '/images/logo.png' },
+    ],
+    shortcut: '/images/logo.png',
+    apple: '/images/logo.png',
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/images/logo.png',
+    },
+  },
+  manifest: '/images/logo.png',
+  themeColor: '#ffffff',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
 };
 
 export default function RootLayout({

@@ -1,6 +1,6 @@
 "use client";
 
-import { HiPhone, HiLocationMarker, HiClock } from "react-icons/hi";
+import { HiPhone, HiLocationMarker } from "react-icons/hi";
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 export default function ContactSection() {
