@@ -8,9 +8,9 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { name: "Home", href: "#home" },
-  { name: "Tentang", href: "#tentang" },
-  { name: "Keunggulan", href: "#keunggulan" },
-  { name: "Kontak", href: "#kontak" },
+  { name: "About", href: "#tentang" },
+  { name: "Features", href: "#keunggulan" },
+  { name: "Contact", href: "#kontak" },
 ];
 
 export default function Navbar() {

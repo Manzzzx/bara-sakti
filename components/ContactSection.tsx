@@ -104,8 +104,8 @@ export default function ContactSection() {
 
               {/* Social Media */}
               <div className="mt-8 pt-8 border-t border-gray-700">
-                <h4 className="text-lg font-semibold text-white mb-4">
-                  Ikuti Kami
+                <h4 className="text-lg font-semibold text-green-500 mb-4">
+                  Hubungi Langsung
                 </h4>
                 <div className="flex space-x-4">
                   {socialMedia.map((social, index) => (
@@ -132,7 +132,7 @@ export default function ContactSection() {
                 <h3 className="text-2xl font-bold text-green-500 mb-4">
                   Lokasi Kami
                 </h3>
-                <p className="text-gray-300 mb-6">
+                <p className="text-white mb-6">
                   Kunjungi toko kami untuk melihat langsung produk arang briket Bara Sakti.
                 </p>
               </div>
