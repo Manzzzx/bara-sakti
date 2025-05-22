@@ -16,10 +16,25 @@ const navItems = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+
+      {/*Menentukan section aktif berdasarkan scroll*/}
+      const sections = navItems.map(item => item.href.substring(1));
+      
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -41,7 +56,6 @@ export default function Navbar() {
         scrolled 
           ? "bg-black/90 backdrop-blur-md shadow-lg" 
           : "bg-black/70 backdrop-blur-sm",
-        // Fallback untuk browser yang tidak support backdrop-filter
         "supports-[backdrop-filter]:bg-black/70"
       )}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
@@ -65,7 +79,10 @@ export default function Navbar() {
                 className={cn(
                   "text-white hover:text-orange-600 transition-colors duration-300",
                   "relative px-3 py-2 font-medium",
-                  "after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-orange-600 after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left"
+                  "after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-orange-600 after:origin-right after:transition-transform after:duration-300",
+                  activeSection === item.href.substring(1)
+                    ? "text-orange-600 after:scale-x-100"
+                    : "after:scale-x-0 hover:after:scale-x-100 hover:after:origin-left"
                 )}
                 onClick={() => setIsOpen(false)}
               >
@@ -85,7 +102,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile menu - sekarang jadi absolute positioning */}
+        {/* Mobile menu*/}
         <div
           className={cn(
             "absolute top-full left-0 w-full md:hidden transition-all duration-300 ease-in-out",
@@ -103,11 +120,13 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "block px-4 py-3 rounded-lg text-base font-medium text-white transition-all duration-200",
-                  "hover:bg-white/10 hover:text-orange-600 active:bg-white/20",
+                  "block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200",
+                  "hover:bg-white/10 active:bg-white/20",
                   "relative overflow-hidden",
-                  "after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-orange-600 after:scale-x-0 after:origin-right after:transition-transform after:duration-300",
-                  "hover:after:scale-x-100 hover:after:origin-left"
+                  "after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-orange-600 after:origin-right after:transition-transform after:duration-300",
+                  activeSection === item.href.substring(1)
+                    ? "text-orange-600 bg-white/10 after:scale-x-100"
+                    : "text-white after:scale-x-0 hover:after:scale-x-100 hover:after:origin-left hover:text-orange-600"
                 )}
                 onClick={() => setIsOpen(false)}
               >
