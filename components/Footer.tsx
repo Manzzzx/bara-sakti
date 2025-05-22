@@ -7,7 +7,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-orange-600">Bara Sakti</h3>
             <p className="text-gray-400">
-              Providing quality products and services since 2025
+              Bara Sakti hadir sebagai solusi energi alternatif berbasis arang briket batok kelapa yang ramah lingkungan, efisien, dan berkualitas tinggi.
             </p>
           </div>
 
@@ -15,10 +15,10 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-orange-600">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="/" className="text-gray-300 hover:text-orange-600 transition-colors">Home</a></li>
-              <li><a href="/about" className="text-gray-300 hover:text-orange-600 transition-colors">About</a></li>
-              <li><a href="/services" className="text-gray-300 hover:text-orange-600 transition-colors">Features</a></li>
-              <li><a href="/contact" className="text-gray-300 hover:text-orange-600 transition-colors">Contact</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-orange-600 transition-colors">Home</a></li>
+              <li><a href="#tentang" className="text-gray-300 hover:text-orange-600 transition-colors">About</a></li>
+              <li><a href="#keunggulan" className="text-gray-300 hover:text-orange-600 transition-colors">Features</a></li>
+              <li><a href="#kontak" className="text-gray-300 hover:text-orange-600 transition-colors">Contact</a></li>
             </ul>
           </div>
 
