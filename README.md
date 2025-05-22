@@ -1,15 +1,16 @@
 # Bara Sakti
 
-A modern web application built with Next.js, featuring [brief description of your project's main features].
-
-![Project Screenshot/Logo](path_to_screenshot.png) *(You can add a screenshot or logo of your project here)*
+A simple web application built with Next.js 15, featuring a responsive design, and beautiful animations powered by Framer Motion.
 
 ## 🚀 Features
 
-- Feature 1
-- Feature 2
-- Feature 3
-- [Add more features as they are developed]
+- ⚡ **Modern Tech Stack** - Built with Next.js 15 and React 19
+- 🎨 **Beautiful UI** - Styled with TailwindCSS and custom animations
+- 📱 **Responsive Design** - Works perfectly on all devices
+- 🎭 **Animations** - Smooth animations with Framer Motion
+- 🧩 **Component Library** - Custom UI components using Radix UI
+- 🔍 **SEO Optimized** - Built with Next.js App Router for better SEO
+- 🎯 **Type Safety** - Written in TypeScript for better development experience
 
 ## 📋 Prerequisites
 
@@ -43,10 +44,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## 🏗️ Built With
 
-- [Next.js](https://nextjs.org/) - The React framework for production
-- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
-- [Geist Font](https://vercel.com/font) - A modern font family for Vercel
-- [Add other major libraries/frameworks used in your project]
+- [Next.js](https://nextjs.org/) - The React framework for production (v15.3.2)
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces (v19.0.0)
+- [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework (v4)
+- [Framer Motion](https://www.framer.com/motion/) - Production-ready animation library (v12.11.4)
+- [Radix UI](https://www.radix-ui.com/) - Unstyled, accessible UI components
+- [TypeScript](https://www.typescriptlang.org/) - For type safety (v5)
+- [Lucide React](https://lucide.dev/) - Beautiful icons (v0.510.0)
+- [Next Themes](https://github.com/pacocoursey/next-themes) - Dark mode support
+- [React Icons](https://react-icons.github.io/react-icons/) - Popular icon libraries (v5.5.0)
 
 ## 📖 Project Structure
 
@@ -61,11 +67,6 @@ bara-sakti/
 ## 🔧 Development
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-### Key Development Notes
-- Add important development notes here
-- Include any specific conventions or patterns used
-- Document any crucial development workflows
 
 ## 📚 Learn More
 
@@ -92,15 +93,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
-
-## 📧 Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
-
-Project Link: [https://github.com/your-username/bara-sakti](https://github.com/your-username/bara-sakti)
-
 ---
-*Note: This is a template README. Remember to customize it with your project's specific information, remove any sections that don't apply, and add any additional sections that might be relevant to your project.*
