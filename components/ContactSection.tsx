@@ -18,12 +18,12 @@ export default function ContactSection() {
       content: "Jl. Imam Bonjol No.35, Canting, Klampok, Kec. Wanasari, Kab. Brebes, Jawa Tengah 52252",
       href: "https://maps.app.goo.gl/Zd44kH4ihemyFENdA?g_st=aw"
     },
-    {
-      icon: HiClock,
-      title: "Jam Operasional",
-      content: "Senin - Sabtu: 08:00 - 17:00",
-      href: null
-    }
+    // {
+    //   icon: HiClock,
+    //   title: "Jam Operasional",
+    //   content: "Senin - Sabtu: 08:00 - 17:00",
+    //   href: null
+    // }
   ];
 
   const socialMedia = [
@@ -36,7 +36,7 @@ export default function ContactSection() {
     {
       icon: FaInstagram,
       name: "Instagram",
-      href: "https://www.instagram.com/bara.sakti.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      href: "https://www.instagram.com/bara.sakti.official/",
       color: "text-pink-500 hover:text-pink-600"
     },
   ];
@@ -59,7 +59,7 @@ export default function ContactSection() {
             Hubungi Kami
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Siap melayani kebutuhan arang briket berkualitas Anda. Hubungi kami untuk konsultasi dan pemesanan.
+            Siap melayani kebutuhan arang briket berkualitas premium. Hubungi kami untuk konsultasi dan pemesanan.
           </p>
         </div>
 
@@ -149,7 +149,6 @@ export default function ContactSection() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 />
-               
               </div>
             </div>
           </div>
