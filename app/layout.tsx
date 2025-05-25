@@ -1,46 +1,48 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import { cn } from "@/lib/utils";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Bara Sakti - Arang Briket batok kelapa",
-  description: "Produk arang briket ramah lingkungan dari batok kelapa",
+  title: "Bara Sakti - Solusi Kebutuhan Bahan Bakar Anda",
+  description: "Bara Sakti adalah perusahaan terpercaya yang menyediakan solusi kebutuhan bahan bakar berkualitas tinggi untuk industri dan bisnis Anda.",
+  keywords: ["bahan bakar", "industri", "energi", "bara sakti", "solar", "batubara"],
+  authors: [{ name: "Bara Sakti" }],
+  openGraph: {
+    type: "website",
+    locale: "id_ID",
+    url: "https://barasakti.com",
+    title: "Bara Sakti - Solusi Kebutuhan Bahan Bakar Anda",
+    description: "Bara Sakti adalah perusahaan terpercaya yang menyediakan solusi kebutuhan bahan bakar berkualitas tinggi untuk industri dan bisnis Anda.",
+    siteName: "Bara Sakti",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bara Sakti Preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bara Sakti - Solusi Kebutuhan Bahan Bakar Anda",
+    description: "Bara Sakti adalah perusahaan terpercaya yang menyediakan solusi kebutuhan bahan bakar berkualitas tinggi untuk industri dan bisnis Anda.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/images/logo.png" />
-        <link rel="shortcut icon" href="/images/logo.png" />
-        <link rel="apple-touch-icon" href="/images/logo.png" />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+    <html lang="id" className="scroll-smooth">
+      <body className={cn(inter.className, "min-h-screen bg-background antialiased")}>
+        {children}
       </body>
     </html>
   );

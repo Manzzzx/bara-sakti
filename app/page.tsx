@@ -8,6 +8,9 @@ import Navbar from "@/components/Navbar";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import ContactSection from "@/components/ContactSection";
+import ScrollProgress from "@/components/ScrollProgress";
+import BackToTop from "@/components/BackToTop";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const router = useRouter();
@@ -28,20 +31,45 @@ export default function Home() {
 
   return (
     <>
+      <ScrollProgress />
       <Navbar />
-      <section id="home">
+      <motion.section
+        id="home"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <HeroSection />
-      </section>
-      <section id="tentang">
+      </motion.section>
+      <motion.section
+        id="tentang"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
         <AboutSection />
-      </section>
-      <section id="keunggulan">
+      </motion.section>
+      <motion.section
+        id="keunggulan"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
         <FeaturesSection />
-      </section>
-      <section id ="kontak">
-        <ContactSection/>
-      </section>
+      </motion.section>
+      <motion.section
+        id="kontak"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <ContactSection />
+      </motion.section>
       <Footer />
+      <BackToTop />
     </>
   );
 }

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { HiMenu, HiX } from "react-icons/hi";
 import { cn } from "@/lib/utils";
+import { useNavStore } from "@/lib/store";
 // import { DarkMode } from "./DarkMode";
 
 const navItems = [
@@ -14,9 +15,9 @@ const navItems = [
 ];
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const { isMobileNavOpen, setMobileNavOpen } = useNavStore();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,10 +45,10 @@ export default function Navbar() {
   return (
     <>
       {/* Backdrop overlay untuk mobile menu */}
-      {isOpen && (
+      {isMobileNavOpen && (
         <div 
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
-          onClick={() => setIsOpen(false)}
+          onClick={() => setMobileNavOpen(false)}
         />
       )}
       
@@ -84,7 +85,7 @@ export default function Navbar() {
                     ? "text-orange-600 after:scale-x-100"
                     : "after:scale-x-0 hover:after:scale-x-100 hover:after:origin-left"
                 )}
-                onClick={() => setIsOpen(false)}
+                onClick={() => setMobileNavOpen(false)}
               >
                 {item.name}
               </Link>
@@ -95,10 +96,10 @@ export default function Navbar() {
           {/* Mobile menu button */}
           <button
             className="md:hidden p-2 rounded-md text-white focus:outline-none relative z-50"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setMobileNavOpen(!isMobileNavOpen)}
             aria-label="Toggle menu"
           >
-            {isOpen ? <HiX size={28} /> : <HiMenu size={28} />}
+            {isMobileNavOpen ? <HiX size={28} /> : <HiMenu size={28} />}
           </button>
         </div>
 
@@ -109,7 +110,7 @@ export default function Navbar() {
             "bg-black/95 backdrop-blur-md shadow-2xl border-t border-white/10",
             // Fallback tanpa backdrop-filter
             "supports-[backdrop-filter]:bg-black/90",
-            isOpen 
+            isMobileNavOpen 
               ? "opacity-100 visible translate-y-0" 
               : "opacity-0 invisible -translate-y-2"
           )}
@@ -128,7 +129,7 @@ export default function Navbar() {
                     ? "text-orange-600 bg-white/10 after:scale-x-100"
                     : "text-white after:scale-x-0 hover:after:scale-x-100 hover:after:origin-left hover:text-orange-600"
                 )}
-                onClick={() => setIsOpen(false)}
+                onClick={() => setMobileNavOpen(false)}
               >
                 {item.name}
               </Link>
