@@ -9,7 +9,6 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import ContactSection from "@/components/ContactSection";
 import ScrollProgress from "@/components/ScrollProgress";
-import BackToTop from "@/components/BackToTop";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -43,8 +42,8 @@ export default function Home() {
       </motion.section>
       <motion.section
         id="tentang"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
@@ -52,8 +51,8 @@ export default function Home() {
       </motion.section>
       <motion.section
         id="keunggulan"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
@@ -61,15 +60,14 @@ export default function Home() {
       </motion.section>
       <motion.section
         id="kontak"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
         <ContactSection />
       </motion.section>
       <Footer />
-      <BackToTop />
     </>
   );
 }
