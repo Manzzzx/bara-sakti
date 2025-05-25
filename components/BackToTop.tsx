@@ -30,17 +30,17 @@ const BackToTop = () => {
   };
 
   return (
-    <>
+    <div className="fixed bottom-0 right-0 z-50 p-4 pointer-events-none">
       {isVisible && !isMobileNavOpen && (
         <Button
           onClick={scrollToTop}
-          className="fixed bottom-4 right-4 z-50 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 bg-orange-500 hover:bg-orange-600 text-white border-none"
+          className="rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 bg-orange-500 hover:bg-orange-600 text-white border-none pointer-events-auto"
           size="icon"
         >
           <ArrowUp className="h-5 w-5" />
         </Button>
       )}
-    </>
+    </div>
   );
 };
 
